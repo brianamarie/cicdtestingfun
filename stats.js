@@ -5,7 +5,7 @@ var Stats = function() {
         for (c = 0; c < 30; c++)
             for (f = 0; f < 73; f++) 
                 e = (f + c * 74) * 4, a[e] = a[e + 4], a[e + 1] = a[e + 5], a[e + 2] = a[e + 6];
-        for (c = 0; c < 30; c++) e = (73 + c * 74) * 4, c < g ? (a[e] = b[d].bg.r, a[e + 1] = b[d].bg.g, a[e + 2] = b[d].bg.b) : (a[e] = b[d].fg.r, a[e + 1] = b[d].fg.g, a[e + 2] = b[d].fg.b)
+        for (c = 0; c < 30; c++) e = (73 + c * 74) * 4, c < g ? (a[e] = b[d].bg.r, a[e + 1] = b[d].bg.g, a[e + 2] = b[d].bg.b) : (a[e] = b[d].fg.r, a[e + 1] = b[d].fg.g, a[e + 2] = b[d].fg.b);
     }
     var r = 0,
         t = 2,
@@ -79,7 +79,7 @@ var Stats = function() {
                 f.style.display = "block";
                 break;
             case 2:
-                h.style.display = "block"
+                h.style.display = "block";
         }
     }, !1);
     k = document.createElement("div");
@@ -131,7 +131,7 @@ var Stats = function() {
     B = o.getImageData(0, 0, a.width, a.height);
     try {
         performance && performance.memory && performance.memory.totalJSHeapSize &&
-            (t = 3)
+            (t = 3);
     } catch (G) {}
     h = document.createElement("div");
     h.style.backgroundColor = "rgb(" + Math.floor(b.mb.bg.r / 2) + "," + Math.floor(b.mb.bg.g / 2) + "," + Math.floor(b.mb.bg.b / 2) + ")";
@@ -178,8 +178,8 @@ var Stats = function() {
                 m.putImageData(y, 0, 0);
                 if (t == 3) p = performance.memory.usedJSHeapSize * 9.54E-7, C = Math.min(C, p), D = Math.max(D, p), s(E.data, Math.min(30, 30 - p / 2), "mb"), i.innerHTML = '<span style="font-weight:bold">' + Math.round(p) + " MB</span> (" + Math.round(C) + "-" + Math.round(D) + ")", q.putImageData(E, 0, 0);
                 v = j;
-                u = 0
+                u = 0;
             }
         }
-    }
+    };
 };
