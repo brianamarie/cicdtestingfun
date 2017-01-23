@@ -1,5 +1,6 @@
 // stats.js r6 - http://github.com/mrdoob/stats.js
 /* jshint expr: true */
+/* jshint nonew: true */
 var Stats = function() {
     function s(a, g, d) {
         var f, c, e;
