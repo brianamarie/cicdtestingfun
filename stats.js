@@ -162,7 +162,7 @@ var Stats = function() {
         domElement: g,
         update: function() {
             u++;
-            j = (new Date).getTime();
+            j = new Date().getTime();
             n = j - F;
             z = Math.min(z, n);
             A = Math.max(A, n);
