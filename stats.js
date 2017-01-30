@@ -183,5 +183,5 @@ var Stats = function() {
                 u = 0;
             }
         }
-    };
+    }
 };
