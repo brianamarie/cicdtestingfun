@@ -1,34 +1,25 @@
 require 'test/unit'
 
-class TestDirectoryContents < Test::Unit::TestCase
+class TestGameSpeed < Test::Unit::TestCase
 
-  def test_no_other_files_root
-    correct_files = [".bundle",
-     ".git",
-     ".github",
-     ".gitignore",
-     ".travis.yml",
-     ".yamllint",
-     "Gemfile",
-     "Gemfile.lock",
-     "README.md",
-     "_config.yml",
-     "_layouts",
-     "_pins",
-     "createMap.topojson",
-     "index.html",
-     "readme.md",
-     "render.js",
-     "tests",
-     "vendor"]
-    correct_files_sorted = correct_files.sort
-    actual_files = []
-    puts correct_files_sorted
-    Dir.foreach('./') do |item|
-      next if item == '.' or item == '..'
-      actual_files.push(item)
+# find the place in the index.html file with speed variables
+# make sure they are within a given range
+
+  def test_game_speed
+    f = File.open("./index.html")
+    f.each do line
+      print line
+      if line.match/decrement
+        value = true
+        return true
+        assert_equal(true, true)
+      end
     end
-    actual_files_sorted = actual_files.sort
-    assert_equal(correct_files_sorted, actual_files_sorted)
+    false
   end
+
+
+    #File.read("./index.html")
+    # true or false: is that number between 0 and 1
+    # assert that the number is between 0 and 1
 end
