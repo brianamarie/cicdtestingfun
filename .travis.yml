@@ -10,3 +10,4 @@ script:
   - ruby tests/test_speeddecrement.rb
   - ruby tests/test_speedstart.rb
   - ruby tests/test_speedmax.rb
+  - ruby tests/test_differentcolors.rb
