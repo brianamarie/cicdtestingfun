@@ -1,4 +1,5 @@
 require 'test/unit'
+require 'search_in_file'
 
 class TestGameSpeed < Test::Unit::TestCase
 
@@ -6,14 +7,8 @@ class TestGameSpeed < Test::Unit::TestCase
 # make sure they are within a given range
 
   def test_game_speed
-    f = File.open("./index.html")
-    f.each do line
-      print line
-      if line.match/decrement
-        value = true
-        return true
-        assert_equal(true, true)
-      end
+    SearchInFile.search( "./index.html", "decrement" )
+    return true 
     end
     false
   end
