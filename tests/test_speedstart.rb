@@ -18,7 +18,6 @@ class TestGameStart < Test::Unit::TestCase
 
     puts start
 
-    puts "its right above me"
     start_less_than_1 = start.to_f < 1.0
     start_greater_than_0 = start.to_f > 0.0
     start_range = start_less_than_1 && start_greater_than_0
