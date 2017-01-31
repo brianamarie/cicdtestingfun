@@ -8,4 +8,3 @@ script:
   - npm test
   - bundle install
   - ruby tests/test_speedupgame.rb
-  - bundle exec jekyll build
