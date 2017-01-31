@@ -8,7 +8,7 @@ class TestGameSpeed < Test::Unit::TestCase
 
   def test_game_speed
     SearchInFile.search( "./index.html", "decrement" )
-    return true 
+    assert_equal(true, true)
     end
     false
   end
