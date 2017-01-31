@@ -1,8 +1,8 @@
 require 'test/unit'
 
-class TestGameSpeed < Test::Unit::TestCase
+class TestGameDecrement < Test::Unit::TestCase
 
-  def test_game_speed
+  def test_game_decrement
     # open file to read
     file = File.read('./index.html')
 
