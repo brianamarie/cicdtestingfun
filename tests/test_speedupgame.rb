@@ -1,5 +1,4 @@
 require 'test/unit'
-require 'search_in_file'
 
 class TestGameSpeed < Test::Unit::TestCase
 
