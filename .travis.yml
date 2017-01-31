@@ -1,9 +1,10 @@
-language: node_js
-node_js:
-  - 6
-
+language: ruby
+rvm:
+  - 2.1
+sudo: false
 install:
   - npm install
-  
-script: 
+script:
   - npm test
+  - bundle install
+  - ruby tests/test_speedupgame.rb
