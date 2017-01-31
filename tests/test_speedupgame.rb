@@ -2,15 +2,26 @@ require 'test/unit'
 
 class TestGameSpeed < Test::Unit::TestCase
 
-# find the place in the index.html file with speed variables
-# make sure they are within a given range
-
   def test_game_speed
-    assert_equal(true, true)
+    # open file to read
+    file = File.read('./index.html')
+
+    # search for decrement word
+    decrement_index = file.index('decrement')
+    min_index = file.index('min:')
+    puts decrement_index
+    puts '> '
+    puts min_index
+
+    # assign number after decrement to a variable
+    decrement = file[decrement_index + 11...min_index - 2]
+    puts decrement
+
+    decrement_less_than_1 = decrement.to_f < 1.0
+    decrement_greater_than_0 = decrement.to_f > 0.0
+    decrement_range = decrement_less_than_1 && decrement_greater_than_0
+    # assert if that variable is between 0-1
+    assert(decrement_range, "The decrement is not between 0 and 1.")
   end
 
-
-    #File.read("./index.html")
-    # true or false: is that number between 0 and 1
-    # assert that the number is between 0 and 1
 end
