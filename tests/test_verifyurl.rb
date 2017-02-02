@@ -8,15 +8,11 @@ class TestGameStart < Test::Unit::TestCase
 
     # get url for remote
     remote = `git config remote.origin.url`
-    puts remote
 
     # get username in remote url
     split_remote = remote.to_s.split(/[\s\/:]/)
-    puts split_remote
     username_remote = split_remote[1]
-    puts username_remote
     print 'Username in remote: '
-    puts username_remote
 
     # search for README url, assign to link
     link_index = file.index('at:')
