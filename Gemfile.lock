@@ -30,6 +30,7 @@ GEM
     minitest (5.10.1)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
+    power_assert (0.2.6)
     public_suffix (2.0.5)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
@@ -37,6 +38,8 @@ GEM
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
+    test-unit (3.1.5)
+      power_assert
 
 PLATFORMS
   ruby
@@ -44,6 +47,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   minitest
+  test-unit
 
 BUNDLED WITH
    1.14.3
