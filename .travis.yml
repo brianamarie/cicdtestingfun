@@ -11,3 +11,4 @@ script:
   - ruby tests/test_speedstart.rb
   - ruby tests/test_speedmax.rb
   - ruby tests/test_differentcolors.rb
+  - ruby tests/test_verifyurl.rb
