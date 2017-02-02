@@ -1,9 +1,14 @@
-language: node_js
-node_js:
-  - 6
-
+language: ruby
+rvm:
+  - 2.1
+sudo: false
 install:
   - npm install
-  
-script: 
+script:
   - npm test
+  - bundle install
+  - ruby tests/test_speeddecrement.rb
+  - ruby tests/test_speedstart.rb
+  - ruby tests/test_speedmax.rb
+  - ruby tests/test_differentcolors.rb
+  - ruby tests/test_verifyurl.rb
