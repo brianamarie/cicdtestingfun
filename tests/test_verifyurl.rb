@@ -11,9 +11,9 @@ class TestGameStart < Test::Unit::TestCase
     puts remote
 
     # get username in remote url
-    split_remote = remote.to_s.split('/')
+    split_remote = remote.to_s.split(/[\s\/:]/)
     puts split_remote
-    username_remote = split_remote[3]
+    username_remote = split_remote[1]
     puts username_remote
     print 'Username in remote: '
     puts username_remote
