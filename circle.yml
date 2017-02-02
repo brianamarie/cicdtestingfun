@@ -1,6 +1,6 @@
 machine:
   ruby:
-    version: 3.0.0
+    version: 2.2.6
 
 test:
   post:
