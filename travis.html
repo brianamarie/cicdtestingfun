@@ -68,7 +68,7 @@
         </div>
         <div class="collapsible-body">
           <ul class="collapsible" data-collapsible="expandable">
-            <!-- Installing Packages on Standard Infrastructure TODO-->
+            <!-- Installing Packages on Standard Infrastructure-->
             <li>
               <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
                 <h6>Installing Packages on Standard Infrastructure</h6>
@@ -91,12 +91,49 @@
                         - sudo dpkg -i pngquant_1.7.1-1_i386.deb
                       </pre></code
                       </div>
-                    <!--Installing Packages with the APT Addon TODO-->
+                    <!--Installing Packages with the APT Addon-->
                     <li>
                       <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
                         <h6>Installing Packages with the APT Addon</h6>
                       </div>
                       <div class="collapsible-body">
+                      <p>You can also use the APT addon. This addon provides declarative shortcuts to basic operations of the apt-get commands. If your requirements goes beyond the normal installation, please use another method described above.</p>
+                      <h6>Adding APT Sources</h6>
+                        <p>To add APT sources, you can use one of the following three types of entries:</p>
+                        <ul>
+                          <li> Aliases defined in source whitelist
+                          <li> Sourceline key-value pairs which will be added to /etc/apt/sources.list
+                          <li> When APT sources require GPG keys, you can specify this with key_url pairs in addition to sourceline
+                        <p>The following snippet shows these three types of APT sources:</p>
+                        <pre><code>
+                        addons:
+                          apt:
+                            sources:
+                            - deadsnakes
+                            - sourceline: 'ppa:ubuntu-toolchain-r/test'
+                            - sourceline: 'deb https://packagecloud.io/chef/stable/ubuntu/precise main'
+                              key_url: 'https://packagecloud.io/gpg.key'
+                        </pre></code>
+                      <h6>Adding APT Packages</h6>
+                        <p>List APT packages under the addons.apt.packages key:</p>
+                        <pre><code>
+                        addons:
+                          apt:
+                            packages:
+                            - cmake
+                            - time
+                        </pre></code>
+                        <p>Note: When using APT sources and packages together, you need to make sure they are under the same key space in the YAML file. e.g.</p>
+                        <pre><code>
+                        addons:
+                          apt:
+                            sources:
+                            - ubuntu-toolchain-r-test
+                            packages:
+                            - gcc-4.8
+                            - g++-4.8
+                        </pre></code>
+                        <p>Note: If apt-get install fails, the build is marked an error.</p>
                       </div>
               </div>
             <!-- Installing Packages on Container Based Infrastructure TODO-->
