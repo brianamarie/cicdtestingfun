@@ -56,7 +56,7 @@
                 <h6>Other Language Options</h6>
               </div>
               <div class="collapsible-body">
-                To see the most up to date list of supported languages, <a href="https://docs.travis-ci.com/user/getting-started/">please see Travis's documentation</a>.
+                <p> To see the most up to date list of supported languages, <a href="https://docs.travis-ci.com/user/getting-started/">please see Travis's documentation</a>.</p>
               </div>
         </div>
       </li>
@@ -68,6 +68,7 @@
         </div>
         <div class="collapsible-body">
           <ul class="collapsible" data-collapsible="expandable">
+            <!-- Installing Packages on Standard Infrastructure TODO-->
             <li>
               <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
                 <h6>Installing Packages on Standard Infrastructure</h6>
@@ -75,12 +76,22 @@
               <div class="collapsible-body">
                 <p> When possible, use the <code>before_install</code> step to handle addons.</p>
                   <ul class="collapsible" data-collapsible="expandable">
+                    <!--Installing Packages without an APT Repository-->
                     <li>
                       <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
                         <h6>Installing Packages without an APT Repository</h6>
                       </div>
                       <div class="collapsible-body">
+                      <p>For some projects, there may be a Debian/Ubuntu package available, but no corresponding APT repository. These are still easy to install, but require the extra step of downloading.</p>
+                      <p>If you’re installing packages this way, make sure you download the correct version for your environment.</p>
+                      <p>Say your project requires the pngquant tool to compress PNG files, here’s how to download and install the .deb file:</p>
+                      <pre><code>
+                      before_install:
+                        - wget http://pngquant.org/pngquant_1.7.1-1_i386.deb
+                        - sudo dpkg -i pngquant_1.7.1-1_i386.deb
+                      </pre></code
                       </div>
+                    <!--Installing Packages with the APT Addon TODO-->
                     <li>
                       <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
                         <h6>Installing Packages with the APT Addon</h6>
@@ -88,19 +99,22 @@
                       <div class="collapsible-body">
                       </div>
               </div>
-              <li>
+            <!-- Installing Packages on Container Based Infrastructure TODO-->
+            <li>
               <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
                 <h6>Installing Packages on Container Based Infrastructure</h6>
               </div>
               <div class="collapsible-body">
                 <p> To install packages not included in the default container-based-infrastructure you need to use the APT addon, as <code>sudo apt-get</code> is not available. </p>
                   <ul class="collapsible" data-collapsible="expandable">
+                    <!--Adding APT Sources-->
                     <li>
                       <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
                         <h6>Adding APT Sources</h6>
                       </div>
                       <div class="collapsible-body">
                       </div>
+                    <!--Adding APT Packages-->
                     <li>
                       <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
                         <h6>Adding APT Packages</h6>
