@@ -220,13 +220,15 @@
               </div>
       </li>
       <!-- Install cache components (Optional) L1-->
-      <!-- headers are stubbed out, needs content: When? TODO -->
+      <!-- When? TODO -->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
-          <h5><code>cache</code> <em>(Optional)</em></h5>
+          <h5><code>cache</code></h5>
         </div>
         <div class="collapsible-body">
-          <h5>What is <code>cache</code>?</h5>
+          <h5 style="text-decoration: underline"><code>cache</code>TL;DR</h5>
+            <p>You can tell Travis CI to ignore parts of your code that will slow down the build.
+          <h5 style="text-decoration: underline">What is <code>cache</code>?</h5>
             <p>Travis CI can cache content that does not often change, to speed up your build process. To use the caching feature, in your repository settings, set Build pushes to ON.</p>
             <p>Travis CI fetches the cache for every build, including branches and pull requests.
             If a branch does not have its own cache, Travis CI fetches the master branch cache.
@@ -234,9 +236,10 @@
             Only modifications made to the cached directories from normal pushes are stored.
             <em>Please note that cache content is available to any build on the repository, including Pull Requests, so make sure you do not put any sensitive information in the cache.</em></p>
             <p>For more information on caching, see <a href="https://docs.travis-ci.com/user/caching">the detailed documentation</a>.
-          <h5>When is <code>cache</code> necessary?</h5>
-            <p>text text text</p>
-          <h5><code>cache</code> examples</h5>
+          <h5 style="text-decoration: underline">When is <code>cache</code> necessary?</h5>
+            <p>This decision may depend on the language of your project. The general rule of thumb is to cache parts of your code that will take a long time to load and won't change very often.</p>
+            <p>You might choose to cache things for the builds run for every small commit, but then include all portions of your code in tests before merging.</p>
+          <h5 style="text-decoration: underline"><code>cache</code> examples</h5>
             <pre><code>
             cache:
               bundler: true
