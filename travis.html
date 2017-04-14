@@ -39,7 +39,7 @@
     <br />
     <ul class="collapsible" data-collapsible="expandable">
       <!-- language L1-->
-      <!-- content complete-->
+      <!-- content started: What? TODO When? TODO Example TODO-->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>language</code></h5>
@@ -61,7 +61,7 @@
         </div>
       </li>
       <!-- Install Addons (Optional) L1-->
-      <!-- content complete-->
+      <!-- content started: What? TODO When? TODO Example TODO-->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5 id="_optional_installaddons"><code>addons</code> <em>(Optional)</em> </h5>
@@ -220,37 +220,34 @@
               </div>
       </li>
       <!-- Install cache components (Optional) L1-->
-      <!-- headers are stubbed out, needs content -->
+      <!-- headers are stubbed out, needs content: What? TODO When? TODO Example TODO -->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>cache</code> <em>(Optional)</em></h5>
         </div>
         <div class="collapsible-body">
           <ul class="collapsible" data-collapsible="expandable">
-            <p>Travis CI can cache content that does not often change, to speed up your build process. To use the caching feature, in your repository settings, set Build pushes to ON.</p>
-            <p>Travis CI fetches the cache for every build, including branches and pull requests.
-            If a branch does not have its own cache, Travis CI fetches the master branch cache.
-            There is one cache per branch and language version/ compiler version/ JDK version/ Gemfile location/ etc.
-            Only modifications made to the cached directories from normal pushes are stored.
-            <em>Please note that cache content is available to any build on the repository, including Pull Requests, so make sure you do not put any sensitive information in the cache.</em></p>
-            <p>For more information on caching, see <a href="https://docs.travis-ci.com/user/caching">the detailed documentation</a>.
-            <!--Examples L2-->
-            <li>
-              <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><i class="mdi-navigation-chevron-right"></i>
-                <h6>Example:</h6>
-              </div>
-              <div class="collapsible-body">
-                <pre><code>
-                cache:
-                  bundler: true
-                  directories:
-                    - node_modules # NPM packages
-                </pre></code>
-              </div>
+            <p><strong>What is <code>cache</code>?</strong></p>
+              <p>Travis CI can cache content that does not often change, to speed up your build process. To use the caching feature, in your repository settings, set Build pushes to ON.</p>
+              <p>Travis CI fetches the cache for every build, including branches and pull requests.
+              If a branch does not have its own cache, Travis CI fetches the master branch cache.
+              There is one cache per branch and language version/ compiler version/ JDK version/ Gemfile location/ etc.
+              Only modifications made to the cached directories from normal pushes are stored.
+              <em>Please note that cache content is available to any build on the repository, including Pull Requests, so make sure you do not put any sensitive information in the cache.</em></p>
+              <p>For more information on caching, see <a href="https://docs.travis-ci.com/user/caching">the detailed documentation</a>.
+            <p><strong>When is <code>cache</code> necessary?</strong></p>
+              <p>text text text</p>
+            <p><strong><code>cache</code> examples</strong></p>
+              <pre><code>
+              cache:
+                bundler: true
+                directories:
+                  - node_modules # NPM packages
+              </pre></code>
         </div>
       </li>
       <!-- before_install -->
-      <!-- todo ALL-->
+      <!-- todo ALL: What? TODO When? TODO Example TODO-->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>before_install</code></h5>
@@ -259,7 +256,7 @@
           <p>I don't like being a third wheel</div>
       </li>
       <!-- install-->
-      <!-- todo ALL-->
+      <!-- todo ALL: What? TODO When? TODO Example TODO-->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>install</code></h5>
@@ -268,7 +265,7 @@
           <p>I don't like being a third wheel</div>
       </li>
       <!-- before_script -->
-      <!-- todo ALL-->
+      <!-- todo ALL: What? TODO When? TODO Example TODO-->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>before_script</code></h5>
@@ -277,7 +274,7 @@
           <p>I don't like being a third wheel</div>
       </li>
       <!-- script -->
-      <!-- todo ALL-->
+      <!-- todo ALL: What? TODO When? TODO Example TODO-->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>script</code></h5>
@@ -286,7 +283,7 @@
           <p>I don't like being a third wheel</div>
       </li>
       <!-- before_cache (Optional) -->
-      <!-- todo ALL-->
+      <!-- todo ALL: What? TODO When? TODO Example TODO-->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>before_cache</code> <em>(Optional, for cleaning up cache)</em></h5>
@@ -295,7 +292,7 @@
           <p>I don't like being a third wheel</div>
       </li>
       <!-- after_success or after_failure -->
-      <!-- todo ALL-->
+      <!-- todo ALL: What? TODO When? TODO Example TODO-->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>after_success</code> or <code>after_failure</code></h5>
@@ -304,7 +301,7 @@
           <p>I don't like being a third wheel</div>
       </li>
       <!-- before_deploy (Optional) -->
-      <!-- todo ALL-->
+      <!-- todo ALL: What? TODO When? TODO Example TODO-->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>before_deploy</code></h5> <em>(Optional)</em>
@@ -313,7 +310,7 @@
           <p>I don't like being a third wheel</div>
       </li>
       <!-- deploy (Optional) -->
-      <!-- todo ALL-->
+      <!-- todo ALL: What? TODO When? TODO Example TODO-->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>deploy</code></h5> <em>(Optional)</em>
@@ -322,7 +319,7 @@
           <p>I don't like being a third wheel</div>
       </li>
       <!-- after_deploy (Optional) -->
-      <!-- todo ALL-->
+      <!-- todo ALL: What? TODO When? TODO Example TODO-->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>after_deploy</code></h5> <em>(Optional)</em>
@@ -331,7 +328,7 @@
           <p>I don't like being a third wheel</div>
       </li>
       <!-- after_script -->
-      <!-- todo ALL-->
+      <!-- todo ALL: What? TODO When? TODO Example TODO-->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>after_script</code></h5>
