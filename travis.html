@@ -39,7 +39,6 @@
     <br />
     <ul class="collapsible" data-collapsible="expandable">
       <!-- language L1-->
-      <!-- content started: What? TODO When? TODO Example TODO-->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>language</code></h5>
@@ -48,10 +47,10 @@
           <h5 style="text-decoration: underline"><code>language</code>TL;DR</h5>
             <p>Define the language your project is using. <strong>Not optional.</strong>
           <h5 style="text-decoration: underline">What is <code>language</code>?</h5>
-            <p></p>
+            <p>The main language of your project will determine the environment set up within Travis. For example, if you have a Ruby project, you'd set up Travis to create a Ruby environment. If you want to set up an environment for multiple languages, or for one language in multiple versions, that's possible but a little trickier.</p>
             <p>For more information on language, see <a href="https://docs.travis-ci.com/user/getting-started/">the detailed documentation</a>.
           <h5 style="text-decoration: underline">When is <code>language</code> necessary?</h5>
-            <p>text about when to use language</p>
+            <p>You always define a language in Travis, and it's usually the very first thing you define in the <code>travis.yml</code> file.</p>
           <h5 style="text-decoration: underline"><code>language</code> examples</h5>
             <pre><code>
             language: ruby
