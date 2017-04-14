@@ -220,30 +220,29 @@
               </div>
       </li>
       <!-- Install cache components (Optional) L1-->
-      <!-- headers are stubbed out, needs content: What? TODO When? TODO Example TODO -->
+      <!-- headers are stubbed out, needs content: When? TODO -->
       <li>
         <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>
           <h5><code>cache</code> <em>(Optional)</em></h5>
         </div>
         <div class="collapsible-body">
-          <ul class="collapsible" data-collapsible="expandable">
-            <h5>What is <code>cache</code>?</h5>
-              <p>Travis CI can cache content that does not often change, to speed up your build process. To use the caching feature, in your repository settings, set Build pushes to ON.</p>
-              <p>Travis CI fetches the cache for every build, including branches and pull requests.
-              If a branch does not have its own cache, Travis CI fetches the master branch cache.
-              There is one cache per branch and language version/ compiler version/ JDK version/ Gemfile location/ etc.
-              Only modifications made to the cached directories from normal pushes are stored.
-              <em>Please note that cache content is available to any build on the repository, including Pull Requests, so make sure you do not put any sensitive information in the cache.</em></p>
-              <p>For more information on caching, see <a href="https://docs.travis-ci.com/user/caching">the detailed documentation</a>.
-            <h5>When is <code>cache</code> necessary?</h5>
-              <p>text text text</p>
-            <h5><code>cache</code> examples</h5>
-              <pre><code>
-              cache:
-                bundler: true
-                directories:
-                  - node_modules # NPM packages
-              </pre></code>
+          <h5>What is <code>cache</code>?</h5>
+            <p>Travis CI can cache content that does not often change, to speed up your build process. To use the caching feature, in your repository settings, set Build pushes to ON.</p>
+            <p>Travis CI fetches the cache for every build, including branches and pull requests.
+            If a branch does not have its own cache, Travis CI fetches the master branch cache.
+            There is one cache per branch and language version/ compiler version/ JDK version/ Gemfile location/ etc.
+            Only modifications made to the cached directories from normal pushes are stored.
+            <em>Please note that cache content is available to any build on the repository, including Pull Requests, so make sure you do not put any sensitive information in the cache.</em></p>
+            <p>For more information on caching, see <a href="https://docs.travis-ci.com/user/caching">the detailed documentation</a>.
+          <h5>When is <code>cache</code> necessary?</h5>
+            <p>text text text</p>
+          <h5><code>cache</code> examples</h5>
+            <pre><code>
+            cache:
+              bundler: true
+              directories:
+                - node_modules # NPM packages
+            </pre></code>
         </div>
       </li>
       <!-- before_install -->
